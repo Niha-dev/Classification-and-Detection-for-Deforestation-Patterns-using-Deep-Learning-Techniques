@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segmentation Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <header class="bg-green text-white py-2">
+        <div class="d-flex justify-content-between align-items-center px-4">
+            <h1 class="mb-0">🌍 Deforestation Detection</h1>
+            <a href="{{ url_for('index') }}" class="btn btn-light">Dashboard</a>
+        </div>
+    </header>
+
+    <div class="container text-center mt-1">
+        <h1 class="mb-4">🌍 Segmentation Result</h1>
+        
+        <div class="row justify-content-center">
+            <div class="col-md-5 mb-4">
+                <h4>Uploaded Image</h4>
+                <img src="{{ url_for('uploaded_file', filename=uploaded_image) }}" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-md-5 mb-4">
+                <h4>Segmented Image</h4>
+                <img src="{{ url_for('uploaded_file', filename=segmented_image) }}" class="img-fluid rounded shadow">
+            </div>
+        </div>
+
+        <div class="result-box mt-2 p-2 shadow-lg">
+            <h3>Analysis Results</h3>
+            <div class="results">
+                <p><strong>Classification Color: {{ classification_color }}</strong></p>
+                <p><strong>Predicted Label:{{ predicted_class }}</strong></p>
+                <p class="text-danger"><strong>Deforested Percentage: {{ deforested_percentage }}%</strong></p>
+                <p><strong>Non-Deforested Percentage: {{ non_deforested_percentage }}%</strong></p>
+                <p><strong>Type of Deforestation:{{ deforestation_type }}</strong></p>
+                <p class="text-warn"><strong>Suggestion: {{ suggestion }}</strong></p>
+
+            </div>
+        </div>
+
+        <a href="{{ url_for('index') }}" class="btn btn-primary mt-4">Upload Another Image</a>
+    </div>
+</body>
+</html>

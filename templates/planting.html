@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planting - Green Initiative</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='services.css') }}">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>🌱 Planting for a Greener Future</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">🏠 Home</a></li>
+                <li><a href="{{ url_for('services') }}">🛠 Services</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Introduction Section -->
+        <section class="intro">
+            <h2>🌍 Why is Planting Important?</h2>
+            <p>Tree planting is one of the most effective solutions to combat climate change. Trees absorb carbon dioxide, release oxygen, and support biodiversity. They provide numerous environmental, social, and economic benefits.</p>
+        </section>
+
+        <!-- Benefits of Planting -->
+        <section class="benefits">
+            <h3>🌿 Key Benefits of Tree Planting</h3>
+            <ul>
+                <li>🌱 <strong>Improves Air Quality:</strong> Trees act as natural air filters, absorbing pollutants and producing oxygen.</li>
+                <li>🌳 <strong>Reduces Carbon Footprint:</strong> A single tree can absorb up to 48 pounds of CO₂ per year.</li>
+                <li>🦉 <strong>Enhances Biodiversity:</strong> Forests provide shelter, food, and breeding grounds for wildlife.</li>
+                <li>💧 <strong>Prevents Soil Erosion:</strong> Tree roots stabilize the soil, reducing the risk of landslides and erosion.</li>
+                <li>🌤 <strong>Regulates Climate:</strong> Trees help moderate temperatures and increase rainfall.</li>
+                <li>🏡 <strong>Boosts Mental Well-being:</strong> Green spaces have been proven to reduce stress and improve mental health.</li>
+            </ul>
+        </section>
+
+        <!-- How to Plant Trees -->
+        <section class="how-to-plant">
+            <h3>🌱 How to Plant Trees Effectively</h3>
+            <p>Follow these steps to ensure successful tree planting:</p>
+            <ul>
+                <li>🌍 <strong>Choose the Right Species:</strong> Select trees that are native to your region and suited to the local climate.</li>
+                <li>🌿 <strong>Prepare the Soil:</strong> Ensure the soil is fertile and well-drained before planting.</li>
+                <li>💧 <strong>Water Regularly:</strong> Provide adequate water, especially during the first few years of growth.</li>
+                <li>🌳 <strong>Plant at the Right Time:</strong> The best time to plant trees is during the rainy season or early spring.</li>
+                <li>🛠️ <strong>Maintain the Trees:</strong> Prune and protect trees from pests and diseases.</li>
+            </ul>
+        </section>
+
+        <!-- Types of Trees to Plant -->
+        <section class="tree-types">
+            <h3>🌳 What Types of Trees Should You Plant?</h3>
+            <p>Not all trees are the same. Here are some great options for planting:</p>
+            <ul>
+                <li>🌲 <strong>Native Trees:</strong> Trees that are indigenous to your area, such as oak, maple, or pine.</li>
+                <li>🌴 <strong>Fruit Trees:</strong> Trees like apple, mango, or cherry that provide food and shade.</li>
+                <li>🌿 <strong>Ornamental Trees:</strong> Trees like dogwood or magnolia that enhance the beauty of landscapes.</li>
+                <li>🌱 <strong>Fast-Growing Trees:</strong> Trees like poplar or willow that grow quickly and provide immediate benefits.</li>
+                <li>🌳 <strong>Carbon-Sequestering Trees:</strong> Trees like teak or mahogany that absorb large amounts of CO₂.</li>
+            </ul>
+        </section>
+
+        <!-- Call to Action -->
+        <div class="cta">
+            <p>Join the tree-planting movement today! Every tree planted makes a difference. 🌱</p>
+            <a href="{{ url_for('services') }}" class="btn btn-secondary">Back to Dashboard</a>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Green Initiative. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

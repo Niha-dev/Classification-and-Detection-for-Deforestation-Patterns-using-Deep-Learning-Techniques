@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save Earth Save Life</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background: url('https://wallpaperaccess.com/full/1728938.jpg') no-repeat center center/cover;
+            background-attachment: fixed;
+            color: #2E4A26;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            overflow: hidden;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2E8B57;
+            white-space: nowrap;
+        }
+        .menu {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .menu a {
+            text-decoration: none;
+            color: #2E4A26;
+            font-size: 18px;
+            transition: color 0.3s;
+            padding: 5px 10px;
+            white-space: nowrap;
+        }
+        .menu a:hover {
+            color: #2E8B57;
+        }
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: #2E4A26;
+            margin-right: 15px;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.8);
+            display: inline-block;
+            border-radius: 10px;
+            padding: 30px;
+            max-width: 90%;
+            text-align: center;
+        }
+        h1 {
+            font-size: 40px;
+            color: #2E8B57;
+        }
+        p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 20px auto;
+            color: #2E4A26;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            font-size: 18px;
+            color: white;
+            background: #2E8B57;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #228B22;
+        }
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                padding: 15px;
+            }
+            .menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                background: rgba(255, 255, 255, 0.9);
+                width: 100%;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                padding: 10px 0;
+                text-align: center;
+            }
+            .menu a {
+                padding: 10px;
+                display: block;
+            }
+            .menu-toggle {
+                display: block;
+                position: relative;
+                z-index: 1001;
+            }
+            .menu.show {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
+            .container {
+                padding: 20px;
+                max-width: 90%;
+            }
+            h1 {
+                font-size: 32px;
+            }
+            p {
+                font-size: 16px;
+            }
+        }
+    </style>
+    <script>
+        function toggleMenu() {
+            document.querySelector('.menu').classList.toggle('show');
+        }
+    </script>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">🌿Green.</div>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <div class="menu">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('login') }}">Login</a>
+            <a href="{{ url_for('register') }}">  </a>
+            <a href="{{ url_for('about') }}">   </a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>Save Earth Save Life</h1>
+        <p>
+            Our planet is facing unprecedented challenges due to climate change, deforestation, and pollution. The time to act is now. By making small changes in our daily lives, we can collectively make a big impact on the health of our Earth.
+        </p>
+        <p>
+            Join us in our mission to protect the environment, conserve natural resources, and create a sustainable future for generations to come. Together, we can save the Earth and save lives.
+        </p>
+        <a href="{{ url_for('explore') }}" class="btn">Explore</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <header>
+        <h1>Our Services</h1>
+        <nav>
+            <ul>
+                <a href="{{ url_for('index') }}">Home</a>
+                <a href="{{ url_for('services') }}">services</a>
+                <a href="{{ url_for('about') }}">About</a>
+                <a href="{{ url_for('upload') }}">Upload</a>
+                <a href="{{ url_for('logout') }}">Logout</a>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="services-container">
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="{{ url_for('static', filename='Images/planting.jpeg') }}" alt="Planting">
+                <h3>Planting</h3>
+                <p>We promote tree planting initiatives to create a greener environment.</p>
+                <a href="{{ url_for('planting') }}">Read More >></a>
+            </div>
+
+            <div class="service-card">
+                <img src="{{ url_for('static', filename='Images/recycle.jpeg') }}" alt="Recycle">
+                <h3>Recycle</h3>
+                <p>Encouraging recycling habits to reduce waste and pollution.</p>
+                <a href="{{ url_for('recylce') }}">Read More >></a>
+            </div>
+
+            <div class="service-card">
+                <img src="{{ url_for('static', filename='Images/water_saving.webp') }}" alt="Water Saving">
+                <h3>Water Saving</h3>
+                <p>Implementing water conservation strategies to preserve resources.</p>
+                <a href="{{ url_for('water_saving') }}">Read More >></a>
+            </div>
+
+            <div class="service-card">
+                <img src="{{ url_for('static', filename='Images/tree_saving.webp') }}" alt="Tree Saving">
+                <h3>Tree Saving</h3>
+                <p>Protecting forests and reducing deforestation efforts.</p>
+                <a href="{{ url_for('tree_saving') }}">Read More >></a>
+            </div>
+
+            <div class="service-card">
+                <img src="{{ url_for('static', filename='Images/animal_saving.jpeg') }}" alt="Animals Saving">
+                <h3>Animals Saving</h3>
+                <p>Rescuing and rehabilitating wildlife and endangered species.</p>
+                <a href="{{ url_for('animal_saving') }}">Read More >></a>
+            </div>
+
+            <div class="service-card">
+                <img src="{{ url_for('static', filename='Images/solor_panel.jpg') }}" alt="Solar Panel">
+                <h3>Solar Panel</h3>
+                <p>Promoting renewable energy solutions for a sustainable future.</p>
+                <a href="{{ url_for('solar_panel') }}">Read More >></a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

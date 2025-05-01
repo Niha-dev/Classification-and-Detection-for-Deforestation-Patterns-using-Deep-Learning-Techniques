@@ -1,0 +1,160 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: white;
+    text-align: center;
+}
+
+/* Navbar */
+header {
+    background: #198754;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #d4ecdd;
+}
+
+/* Container */
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    margin: 50px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Profile Section */
+.profile-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-card img {
+    width: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Recent Activity */
+.recent-activity {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.recent-activity ul {
+    list-style: none;
+    padding: 0;
+}
+
+.recent-activity li {
+    background: #eee;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.services-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Grid for aligning 3 cards per row */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px;
+    justify-content: center;
+}
+
+.service-card {
+    background: rgba(255, 255, 255, 0.9); /* Slight transparency */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+/* Image Styling */
+.service-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+/* Text Styling */
+.service-card h3 {
+    font-size: 1.2rem;
+    color: #007b5e;
+    margin-bottom: 8px;
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Read More Link */
+.service-card a {
+    text-decoration: none;
+    color: #007b5e;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+.service-card a:hover {
+    color: #004d3a;
+}

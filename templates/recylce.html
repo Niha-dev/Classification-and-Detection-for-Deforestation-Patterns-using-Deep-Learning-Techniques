@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recycle - Read More</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='services.css') }}">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>♻️ Recycle for a Better Future</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">🏠 Home</a></li>
+                <li><a href="{{ url_for('services') }}">🛠 Services</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="intro">
+            <h2>🌍 Why is Recycling Important?</h2>
+            <p>Recycling helps conserve resources, reduce waste, and protect our environment. It plays a crucial role in **reducing pollution, saving energy, and preserving natural ecosystems.**</p>
+        </section>
+
+        <!-- Benefits of Recycling -->
+        <section class="benefits">
+            <h3>♻️ Key Benefits of Recycling</h3>
+            <ul>
+                <li>💨 <strong>Reduces Pollution:</strong> Less waste in landfills means lower carbon emissions.</li>
+                <li>⚡ <strong>Saves Energy:</strong> Recycling uses less energy than producing new materials.</li>
+                <li>🌳 <strong>Protects Natural Resources:</strong> Preserves forests, water, and minerals.</li>
+                <li>🏭 <strong>Decreases Waste Production:</strong> Reduces landfill overflow and ocean pollution.</li>
+                <li>👷 <strong>Creates Jobs:</strong> The recycling industry provides employment opportunities.</li>
+            </ul>
+        </section>
+
+        <!-- How to Recycle Properly -->
+        <section class="how-to-recycle">
+            <h3>🗑️ How to Recycle Properly</h3>
+            <p>Follow these simple steps to ensure effective recycling:</p>
+            <ul>
+                <li>🔵 **Separate Waste:** Sort plastic, paper, glass, and metal into different bins.</li>
+                <li>🧽 **Clean Items:** Rinse food containers before recycling.</li>
+                <li>🔄 **Reuse When Possible:** Find creative ways to repurpose materials.</li>
+                <li>🏡 **Compost Organic Waste:** Reduce landfill waste by composting food scraps.</li>
+                <li>🗑️ **Avoid Contamination:** Do not mix non-recyclables with recyclables.</li>
+            </ul>
+        </section>
+
+        <!-- Types of Recyclable Materials -->
+        <section class="recyclable-materials">
+            <h3>🛠️ What Can Be Recycled?</h3>
+            <p>Not all materials are recyclable. Here's a list of common recyclable items:</p>
+            <ul>
+                <li>📄 <strong>Paper & Cardboard:</strong> Newspapers, magazines, and packaging.</li>
+                <li>🥤 <strong>Plastic:</strong> Bottles, containers, and food packaging (Check recycling codes!).</li>
+                <li>🍾 <strong>Glass:</strong> Jars, bottles, and windows (if properly sorted).</li>
+                <li>🛢️ <strong>Metals:</strong> Aluminum cans, tin, and steel products.</li>
+                <li>🔋 <strong>Electronics:</strong> Batteries, old phones, and computer parts (through e-waste programs).</li>
+            </ul>
+        </section>
+
+        <!-- Call to Action -->
+        <div class="cta">
+            <p>Join the recycling movement today! Every action counts. ♻️</p>
+            <a href="{{ url_for('index') }}" class="btn btn-secondary">Back to Dashboard</a>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Eco-Friendly Initiative. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

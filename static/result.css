@@ -1,0 +1,145 @@
+/* styles.css */
+
+body {
+    background-color: #f4f4f9;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    margin-bottom: 20px;
+    background-color: #198754 !important; /* Directly applied to the header */
+    padding: 10px 0; /* Added padding for better spacing */
+}
+
+header .bg-dark {
+    background-color: #198754 !important; /* Updated to #198754 */
+}
+
+header .d-flex {
+    max-width: 1200px; /* Optional: Limit the inner content width */
+    margin: 0 auto; /* Center the inner content */
+    padding: 0 20px; /* Add padding to the sides */
+}
+
+.container {
+    max-width: 500px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(8, 137, 6, 0.1);
+}
+
+h1 {
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+h3 {
+    color: #34495e;
+    margin-bottom: 20px;
+}
+
+h4 {
+    color: #34495e;
+    margin-top: 20px;
+}
+
+.img-fluid {
+    max-height: 200px;
+    border: 3px solid #2c3e50;
+    width: 50%; /* Adjusted to 50% for smaller images */
+    height: auto;
+    object-fit: cover; /* Ensures images maintain aspect ratio */
+}
+
+.result-box {
+    background: #a2cbaa !important; /* Soft green tone */
+    color: #1b4332;
+    border-radius: 10px;
+    border: 2px solid #2c3e50;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+
+.result-box p {
+    font-size: 18px;
+    color: #1b4332;
+    margin: 8px 0;
+}
+
+.text-success {
+    color: 333 !important;
+}
+
+.text-danger {
+    color: #db1b1b !important;
+}
+
+.text-warn {
+    color: #381ceb !important;
+}
+
+.text-primary {
+    color: #333 !important;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .row {
+        flex-direction: column;
+    }
+
+    .col-md-5 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .result-box p {
+        font-size: 16px;
+    }
+
+    .btn-primary {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+    
+    .img-fluid {
+        max-height: 150px;
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    header .d-flex {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header .btn {
+        margin-top: 10px;
+    }
+}

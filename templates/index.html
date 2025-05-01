@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deforestation Detection Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+        <!-- Add this in your head section to load Font Awesome icons -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>🌍 Deforestation Detection</h1>
+        <nav>
+            <ul>
+                <a href="{{ url_for('index') }}">Home</a>
+                <a href="{{ url_for('services') }}">services</a>
+                <a href="{{ url_for('about') }}">About</a>
+                <a href="{{ url_for('upload') }}">Upload</a>
+                <a href="#contact">Contact Us</a>
+                <a href="{{ url_for('logout') }}">Logout</a>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Welcome Section -->
+        <section class="welcome">
+            <div class="welcome-card">
+                <h2>Welcome, <span class="username" style="color: #2e7d32; font-weight: 600;">{{user}}</span>!</h2>
+
+                <p>Track and analyze deforestation patterns using advanced technology.</p>   
+            </div>
+        </section>
+
+        <!-- Info Cards Section -->
+        <section class="info-cards">
+            <div class="card">
+                <h3>🌲 What is Deforestation?</h3>
+                <p>Deforestation refers to large-scale forest clearance, mainly due to human activities. It leads to habitat loss, climate change, and biodiversity threats.</p>
+            </div>
+
+            <div class="card">
+                <h3>🔥 Causes of Deforestation</h3>
+                <ul>
+                    <li><strong>Agriculture:</strong> Expanding farmland for crops and livestock.</li>
+                    <li><strong>Urbanization:</strong> Clearing forests for infrastructure.</li>
+                    <li><strong>Illegal Logging:</strong> Unsustainable timber harvesting.</li>
+                    <li><strong>Mining:</strong> Land clearing for mineral extraction.</li>
+                    <li><strong>Wildfires:</strong> Both natural and human-induced fires.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>🌎 Consequences</h3>
+                <ul>
+                    <li><strong>Climate Change:</strong> Increased carbon emissions.</li>
+                    <li><strong>Loss of Biodiversity:</strong> Habitat destruction.</li>
+                    <li><strong>Soil Erosion:</strong> Weakening soil stability.</li>
+                    <li><strong>Water Cycle Disruption:</strong> Reduced rainfall.</li>
+                    <li><strong>Livelihood Impact:</strong> Indigenous displacement.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Technology & Detection Section -->
+        <section class="detection">
+            <div class="tech-card">
+                <h3>📡 How Technology Helps?</h3>
+                <p>Advanced technologies enable real-time deforestation tracking.</p>
+            </div>
+
+            <div class="tech-card">
+                <h3>🛰️ Satellite Imaging</h3>
+                <p>NASA & ESA use high-resolution images to monitor forest loss.</p>
+            </div>
+
+            <div class="tech-card">
+                <h3>🤖 AI & Machine Learning</h3>
+                <p>AI models analyze satellite images to detect deforestation patterns.</p>
+            </div>
+
+            <div class="tech-card">
+                <h3>📊 Data Analytics</h3>
+                <p>Insights from collected data support conservation planning.</p>
+            </div>
+        </section>
+
+        <!-- User Actions -->
+        <section class="user-actions">
+            <h3>💡 How Can You Help?</h3>
+            <div class="actions-grid">
+                <a href="{{ url_for('upload') }}">📤 Upload Image</a>
+            </div>
+        </section>
+        <section class="contact" id="contact">
+            <h3>📞 Contact Us</h3>
+            <p>We'd love to hear from you! For inquiries, collaborations, or feedback, reach out to us.</p>
+          
+            <div class="contact-container">
+              <!-- Left side: details and socials -->
+              <div class="contact-details">
+                <p><strong>Email:</strong> {{user}}</p>
+                <p><strong>Phone:</strong> +91 8976480323</p>
+                <p><strong>Address:</strong> 123 Green Planet Avenue, Earth City, EC 00000</p>
+          
+                
+                <div style="width: 100%; height: 300px; overflow:hidden;">
+                    <iframe 
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.003702123567!2d77.5946!3d12.9716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU4JzE3LjgiTiA3N8KwMzUnNDkuNiJF!5e0!3m2!1sen!2sin!4v1617087600000!5m2!1sen!2sin" 
+                      width="100%" 
+                      height="300" 
+                      style="border:0;" 
+                      allowfullscreen="" 
+                      loading="lazy">
+                    </iframe>
+                  </div>
+              </div>
+          
+              <!-- Right side: form -->
+              <form action="#" method="post" class="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+              </form>
+            </div>
+          </section>
+          
+          
+        
+    </main>
+
+    <footer class="footer">
+        <div class="footer-section">
+          <h4>Deforestation Detection</h4>
+          <p>Empowering environmental protection with AI-powered deforestation detection and reporting tools.</p>
+        </div>
+      
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <a href="{{ url_for('index') }}">Home</a>
+          <a href="{{ url_for('services') }}">services</a>
+          <a href="{{ url_for('about') }}">About</a>
+          <a href="{{ url_for('upload') }}">Upload</a>
+          <a href="#contact">Contact Us</a>
+        </div>
+        <div class="footer-section">
+          <h4>Credentials</h4>
+          <a href="{{ url_for('login')}}">Login</a>
+          <a href="{{ url_for('register') }}">Sign Up</a>
+        </div>
+        <div class="footer-section">
+          <h4>Connect With Us</h4>
+          <div class="social-links">
+            <a href="https://www.instagram.com/" target="_blank" class="social-icon insta"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/" target="_blank" class="social-icon github"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/" target="_blank" class="social-icon linkedin"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </footer>
+</body>
+</html>

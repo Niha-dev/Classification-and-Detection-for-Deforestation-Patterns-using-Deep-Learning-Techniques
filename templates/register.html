@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background: url('https://source.unsplash.com/1600x900/?nature,forest') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(11, 131, 43, 0.8);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .navbar ul {
+            list-style: none;
+            display: flex;
+        }
+        .navbar ul li {
+            margin: 0 15px;
+        }
+        .navbar ul li a {
+            text-decoration: none;
+            color: #2E4A26;
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .navbar ul li a:hover {
+            color: #2E8B57;
+        }
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+/* Form Container */
+.card {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    backdrop-filter: blur(15px);
+}
+.card h2 {
+    color: #2E8B57;
+    margin-bottom: 20px;
+}
+
+/* Form Layout */
+.form-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.form-group label {
+    font-weight: bold;
+    color: #2E4A26;
+    width: 40%;
+    text-align: left;
+}
+.form-group input, .form-group select {
+    width: 58%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+.gender-options {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.gender-options input {
+    margin-right: 5px;
+}
+
+.btn {
+    background: #2E8B57;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 100%;
+    transition: 0.3s;
+}
+.btn:hover {
+    background: #267744;
+}
+.terms {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            .navbar ul {
+                flex-direction: column;
+                display: none;
+                background: rgba(255, 255, 255, 0.9);
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                padding: 10px 0;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            }
+            .navbar ul.show {
+                display: flex;
+            }
+            .navbar ul li {
+                text-align: center;
+                padding: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+    <nav class="navbar">
+        <a href="home.html" class="logo">Green</a>
+        <div class="menu-toggle">☰</div>
+        <ul>
+            <a href="{{ url_for('login') }}">Login</a>
+            <a href="{{ url_for('register') }}">Sign Up</a>
+        </ul>
+    </nav>
+    <div class="card">
+        <h2>Register</h2>
+        <form id="registerForm" action="/register" method="POST">
+            <div class="form-group">
+                <label>First Name</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+            <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+        
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label>Confirm Password</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+            </div>
+            <div class="form-group">
+                <label>Date of Birth</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+        
+            <div class="form-group">
+                <label>Gender</label>
+                <div class="gender-options">
+                    <input type="radio" id="male" name="gender" value="Male" required>
+                    <label for="male">Male</label>
+        
+                    <input type="radio" id="female" name="gender" value="Female">
+                    <label for="female">Female</label>
+        
+                    <input type="radio" id="other" name="gender" value="Other">
+                    <label for="other">Other</label>
+                </div>
+            </div>
+        
+            <div class="form-group">
+                <label>Country</label>
+                <select id="country" name="country" required>
+                    <option value="">Select Country</option>
+                    <option value="India">India</option>
+                    <option value="USA">USA</option>
+                    <option value="UK">UK</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Germany">Germany</option>
+                    <option value="France">France</option>
+                    <option value="Italy">Italy</option>
+                    <option value="Japan">Japan</option>
+                    <option value="Brazil">Brazil</option>
+                    <option value="South Africa">South Africa</option>
+                    <option value="Russia">Russia</option>
+                    <option value="China">China</option>
+                    <option value="Mexico">Mexico</option>
+                    <option value="UAE">UAE</option>
+                </select>
+            </div>
+        
+            <div class="form-group terms">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to all terms</label>
+            </div>
+            <button type="submit" class="btn">Register</button>
+        </form>
+        
+        <script>
+            document.querySelector(".menu-toggle").addEventListener("click", function() {
+                document.querySelector(".navbar ul").classList.toggle("show");
+            });
+        
+            // Close the menu when a link is clicked
+            document.querySelectorAll(".navbar ul li a").forEach(link => {
+                link.addEventListener("click", function() {
+                    document.querySelector(".navbar ul").classList.remove("show");
+                });
+            });
+        
+            document.getElementById("registerForm").addEventListener("submit", function(event) {
+                let password = document.getElementById("password").value;
+                let confirmPassword = document.getElementById("confirmPassword").value;
+                let terms = document.getElementById("terms").checked;
+        
+                if (!password || !confirmPassword) {
+                    alert("❌ Password fields cannot be empty!");
+                    event.preventDefault();
+                    return;
+                }
+        
+                if (password !== confirmPassword) {
+                    alert("❌ Passwords do not match!");
+                    event.preventDefault();
+                    return;
+                }
+        
+                if (!terms) {
+                    alert("❌ You must agree to the terms!");
+                    event.preventDefault();
+                }
+            });
+        </script>
+        
+</body>
+</html>
