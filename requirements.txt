@@ -1,0 +1,17 @@
+Flask
+gunicorn
+tensorflow
+scikit-learn
+numpy
+pillow
+cv2
+os
+numpy
+albumentations
+tqdm
+json
+logging
+joblib
+warnings
+xgboost
+imblearn
